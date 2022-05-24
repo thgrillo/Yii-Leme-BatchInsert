@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Cliente;
 use yii\db\Migration;
 
 /**
@@ -10,33 +11,32 @@ class m220520_141013_add_foto_coluna extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeUp()
-    {
+    // public function safeUp()
+    // {
 
-    }
+    // }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function safeDown()
-    {
-        echo "m220520_141013_add_foto_coluna cannot be reverted.\n";
+    // /**
+    //  * {@inheritdoc}
+    //  */
+    // public function safeDown()
+    // {
+    //     echo "m220520_141013_add_foto_coluna cannot be reverted.\n";
 
-        return false;
-    }
+    //     return false;
+    // }
 
-    /*
     // Use up()/down() to run migration code without a transaction.
     public function up()
     {
-
+        $this->addColumn(Cliente::tableName(), 'foto', $this->string(60));
     }
 
     public function down()
     {
-        echo "m220520_141013_add_foto_coluna cannot be reverted.\n";
+        //echo "m220520_141013_add_foto_coluna cannot be reverted.\n";
 
-        return false;
+        $this->dropColumn(Cliente::tableName(), 'foto');
+
     }
-    */
 }

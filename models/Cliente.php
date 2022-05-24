@@ -13,10 +13,9 @@ use yii\web\UploadedFile;
  * @property string $nome
  * @property string $foto
  */
-class Cliente extends \yii\db\ActiveRecord
+class Cliente extends ActiveRecord
 {
     /**
-     * @var UploadedFile
      */
     public $fotoCliente; 
 
@@ -49,7 +48,7 @@ class Cliente extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nome' => 'Nome',
             'foto' => 'Foto do Cliente',
-            'fotoCliente' => 'Foto do Cliente'
+            'fotoCliente' => 'Foto do Cliente',
         ];
     }
 }
